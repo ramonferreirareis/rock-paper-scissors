@@ -6,16 +6,14 @@ function getComputerChoice () {
     const getHand = Math.floor(Math.random() * 3);
     switch (getHand) {
         case rock:
-            console.log("rock");
-            break;
+            return "rock";
         
         case paper:
-            console.log("paper");
-            break;
+            return "paper";
         
         case scissors:
-            console.log("scissors");
-            break;
+            return "scissors";
+
     }
 }
 
@@ -39,9 +37,37 @@ function getHumanChoice () {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice) {
-    
+function playRound(humanChoice, computerChoice) {
+   if (humanChoice === computerChoice ) {
+        console.log("It's a tie");
+
+   } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log("You've won");
+
+   } else if (humanChoice === "rock" && computerChoice === "paper") {
+        console.log("You've lost");
+
+   } else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("You've won");
+
+   } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        console.log("You've lost");
+
+   } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        console.log("You've won");
+
+   } else if (humanChoice === "scissors" && computerChoice === "rock") {
+        console.log("You'lost");
+        
+   }
+
 }
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection); 
 
 
 
