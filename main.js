@@ -20,23 +20,33 @@ function getComputerChoice () {
 }
 
 function getHumanChoice () {
-    const getHand = prompt("Choose rock, paper or scissors.", "");
+    const getHand = prompt("Choose rock, paper or scissors.", "").toLowerCase();
     switch (getHand) {
         case "rock":
-            console.log("rock");
-            break;
-            
+            return "rock";
+
         case "paper":
-            console.log("paper");
-            break;
+            return "paper";
 
         case "scissors":
-            console.log("scissors");
-            break;
+            return "scissors";
         
         default:
             console.log("Invalid hand");
     }
 }
 
-getHumanChoice ();
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice) {
+    
+}
+
+
+
+
+
+
+
+
