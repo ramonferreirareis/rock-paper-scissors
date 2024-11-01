@@ -6,17 +6,37 @@ function getComputerChoice () {
     const getHand = Math.floor(Math.random() * 3);
     switch (getHand) {
         case rock:
-            console.log("You got rock");
+            console.log("rock");
             break;
         
         case paper:
-            console.log("You got paper");
+            console.log("paper");
             break;
         
         case scissors:
-            console.log("You got scissors");
+            console.log("scissors");
             break;
     }
 }
 
-getComputerChoice();
+function getHumanChoice () {
+    const getHand = prompt("Choose rock, paper or scissors.", "");
+    switch (getHand) {
+        case "rock":
+            console.log("rock");
+            break;
+            
+        case "paper":
+            console.log("paper");
+            break;
+
+        case "scissors":
+            console.log("scissors");
+            break;
+        
+        default:
+            console.log("Invalid hand");
+    }
+}
+
+getHumanChoice ();
