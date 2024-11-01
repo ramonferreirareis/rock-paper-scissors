@@ -34,8 +34,7 @@ function getHumanChoice () {
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+
 
 function playRound(humanChoice, computerChoice) {
    if (humanChoice === computerChoice ) {
@@ -63,18 +62,25 @@ function playRound(humanChoice, computerChoice) {
 
    } else if (humanChoice === "scissors" && computerChoice === "rock") {
         console.log("You'lost");
-        computerScore++;
-        
+        computerScore++;   
    }
 
 }
 
+let humanScore = 0;
+let computerScore = 0;
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame (numberOfMatches) {
+    for (i = 0; i < numberOfMatches; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection); 
+    }
+    console.log("Your score is: " + humanScore);
+    console.log("The computer score is: " + computerScore);
+}
 
-playRound(humanSelection, computerSelection); 
-
+playGame(10);
 
 
 
