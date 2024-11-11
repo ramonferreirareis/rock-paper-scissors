@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 
+    2px solid lime; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
